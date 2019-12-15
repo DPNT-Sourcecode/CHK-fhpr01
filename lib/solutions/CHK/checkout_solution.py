@@ -69,6 +69,7 @@ def checkout(skus):
                 total_B = item_dic['B']
                 if total_B == total_discount:
                     total -= PRICE_B * total_discount
+                    print(PRICE_B * total_discount)
                 elif total_discount > total_B:
                     total -= total_B * PRICE_B
                 elif total_discount < total_B:
@@ -78,3 +79,4 @@ def checkout(skus):
             return -1
 
     return total
+
