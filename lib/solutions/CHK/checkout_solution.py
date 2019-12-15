@@ -17,9 +17,9 @@ def checkout(skus):
     if not isinstance(skus, str):
         return -1
 
-    skus = skus.replace(" ", "").split()
+    skus = skus.replace(" ", "")
     items = [x for x in skus]
-    print(items)
+
     item_dic = {}
     for x in items:
         if x in item_dic:
@@ -47,6 +47,7 @@ def checkout(skus):
             return -1
 
     return total
+
 
 
 
