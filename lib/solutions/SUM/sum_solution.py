@@ -1,5 +1,5 @@
 # noinspection PyShadowingBuiltins,PyUnusedLocal
-def get_total_value(x, y):
+def compute(x, y):
     '''
     Add two numbers x and y
     :param: x: first number
@@ -8,6 +8,7 @@ def get_total_value(x, y):
     :rype: int
     '''
     return (x + y)
+
 
 
 
