@@ -13,12 +13,11 @@ def checkout(skus):
     items
     :rtype: int
     """
-    valid_items = ['A', 'B', 'C', 'D']
 
     if not isinstance(skus, str):
         return -1
 
-    items = skus.replace(" ", "").split(',')
+    items = skus.replace(" ", "").split()
 
     item_dic = {}
     for x in items:
@@ -47,3 +46,4 @@ def checkout(skus):
             return -1
 
     return total
+

@@ -14,16 +14,17 @@ class TestCheckout():
         """
         Test return value
         """
-        assert checkout("A, A") == 100
+        assert checkout("AA") == 100
 
     def test_return_val_with_diffrent_items(self):
-        assert checkout("A, B, C") == 100
+        assert checkout("ABC") == 100
 
     def test_multi_items_of_the_same_type(self):
-        assert checkout("A, B, A") == 130
+        assert checkout("ABA") == 130
 
     def test_multi_itmes_offer(self):
-        assert checkout("A, A, B, A") == 160
+        assert checkout("AABA") == 160
 
     def test_multiple_multi_itmes_offers(self):
-        assert checkout("A, A, B, A, A, A, A") == 290
+        assert checkout("AABAAAA") == 290
+
