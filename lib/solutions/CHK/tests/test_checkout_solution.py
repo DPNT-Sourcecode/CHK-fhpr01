@@ -39,6 +39,3 @@ class TestCheckout():
 
     def check_single_item_value(self):
         assert checkout("E") == 40
-
-
-
