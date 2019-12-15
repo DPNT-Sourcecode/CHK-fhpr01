@@ -16,8 +16,9 @@ class TestCheckout():
     def test_return_val_with_diffrent_items(self):
         assert checkout("A, B, C") == 100
 
-    def test_multipe_items_of_the_same_type(self):
+    def test_multi_items_of_the_same_type(self):
         assert checkout("A, B, A") == 130
 
-    def test_mulit_itmes_offer(self):
+    def test_multi_itmes_offer(self):
         assert checkout("A, A, B, A") == 160
+

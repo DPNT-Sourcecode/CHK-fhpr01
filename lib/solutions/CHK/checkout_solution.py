@@ -26,6 +26,8 @@ def checkout(skus):
     for key, value in item_dic.items():
         if key == 'A':
             total += 50 * value
+            if item_dic['A'] >= 3:
+                total -= 20
         elif key == 'B':
             total += 30 * value
         elif key == 'C':
@@ -34,3 +36,4 @@ def checkout(skus):
             total += 15 * value
 
     return total
+
