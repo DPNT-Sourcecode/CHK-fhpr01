@@ -7,5 +7,3 @@ def hello(friend_name):
     Return hello messsage
     """
     return 'Hello, World!'
-
-

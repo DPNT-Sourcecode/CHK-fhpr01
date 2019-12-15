@@ -8,4 +8,3 @@ def compute(x, y):
     :rtype: int
     '''
     return (x + y)
-
