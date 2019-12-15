@@ -25,6 +25,10 @@ class TestCheckout():
     def test_multi_itmes_offer(self):
         assert checkout("AABA") == 160
 
-    def test_multiple_multi_itmes_offers(self):
+    def test_multiple_multi_items_offers(self):
         assert checkout("AABAAAA") == 290
+
+    def test_multipe_type_B_values(self):
+        assert checkout("BB") == 45
+
 
