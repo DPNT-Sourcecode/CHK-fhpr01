@@ -13,9 +13,13 @@ def checkout(skus):
     items
     :rtype: int
     """
+    valid_items = ['A', 'B', 'C', 'D']
+
     if not isinstance(skus, str):
         return -1
+
     items = skus.replace(" ", "").split(',')
+
     item_dic = {}
     for x in items:
         if x in item_dic:
@@ -24,7 +28,6 @@ def checkout(skus):
             item_dic[x] = 1
 
     total = 0
-    print(item_dic)
     for key, value in item_dic.items():
         if key == 'A':
             total += 50 * value
@@ -40,10 +43,7 @@ def checkout(skus):
             total += 20 * value
         elif key == 'D':
             total += 15 * value
+        else:
+            return -1
 
     return total
-
-
-
-
-

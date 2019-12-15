@@ -7,6 +7,9 @@ class TestCheckout():
     def test_illegal_val(self):
         assert checkout(256) == -1
 
+    def test_illegal_string(self):
+        assert checkout('-') == -1
+
     def test_return_val(self):
         """
         Test return value
@@ -24,6 +27,3 @@ class TestCheckout():
 
     def test_multiple_multi_itmes_offers(self):
         assert checkout("A, A, B, A, A, A, A") == 290
-
-
-
