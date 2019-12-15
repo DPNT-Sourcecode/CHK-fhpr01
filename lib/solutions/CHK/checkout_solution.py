@@ -45,9 +45,11 @@ def checkout(skus):
             total += 15 * value
         elif key == 'E':
             total += 40 * value
-            # total_discount = math.floor(item_dic['B'] / 2)
+            total_discount = math.floor(item_dic['E'] / 2)
+
         else:
             return -1
 
     return total
+
 
