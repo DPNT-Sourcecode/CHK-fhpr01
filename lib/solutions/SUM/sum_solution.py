@@ -5,6 +5,7 @@ def compute(x, y):
     :param: x: first number
     :param: y: second number
     :return: total value after adding x and y
-    :rype: int
+    :rtype: int
     '''
     return (x + y)
+
