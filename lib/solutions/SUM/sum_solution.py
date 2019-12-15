@@ -7,6 +7,7 @@ def get_total_value(x, y):
     :return: total value after adding x and y
     :rype: int
     '''
-    return 10
+    return (x + y)
+
 
 
