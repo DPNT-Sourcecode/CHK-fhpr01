@@ -3,6 +3,16 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    """
+    Add the total checkout item values
+    :param: skus: checkout items in
+    string i.e. (A, B, C)
+    :return: total value after adding the
+    items
+    :rtype: int
+    """
+    if not isinstance(skus, str):
+        return -1
     items = skus.replace(" ", "").split(',')
     item_dic = {}
     for x in items:
@@ -24,6 +34,7 @@ def checkout(skus):
             total += 15 * value
 
     return total
+
 
 
 
