@@ -18,7 +18,7 @@ def checkout(skus):
         return -1
 
     items = skus.replace(" ", "").split()
-
+    print(items)
     item_dic = {}
     for x in items:
         if x in item_dic:
@@ -46,4 +46,5 @@ def checkout(skus):
             return -1
 
     return total
+
 
