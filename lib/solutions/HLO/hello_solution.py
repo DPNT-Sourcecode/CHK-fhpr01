@@ -6,4 +6,5 @@ def hello(friend_name):
     """
     Return hello messsage
     """
-    return 'Hello, World!'
+    return f'Hello, {friend_name}!'
+
