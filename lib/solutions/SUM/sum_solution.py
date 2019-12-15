@@ -8,7 +8,3 @@ def compute(x, y):
     :rype: int
     '''
     return (x + y)
-
-
-
-
