@@ -37,8 +37,14 @@ def checkout(skus):
     for key, value in item_dic.items():
         if key == 'A':
             total += PRICE_A * value
-            total_discount = math.floor(item_dic['A'] / 3)
+            total_discount = math.floor(item_dic['A'] / 5)
+            if item_dic['A'] >= 5:
+                total -= (50 * total_discount)
+
+            total_discount = item_dic['A'] - (total_discount * 5)
+            total_reminder_discount = math.floor(total_discount / 3)
             if item_dic['A'] >= 3:
+                total_discount = math.floor(item_dic['A'] / 3)
                 total -= (20 * total_discount)
 
         elif key == 'B':
@@ -60,5 +66,6 @@ def checkout(skus):
             return -1
 
     return total
+
 
 
