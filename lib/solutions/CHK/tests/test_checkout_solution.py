@@ -21,8 +21,3 @@ class TestCheckout():
 
     def test_mulit_itmes_offer(self):
         assert checkout("A, A, B, A") == 160
-
-
-
-
-
