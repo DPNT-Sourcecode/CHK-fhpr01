@@ -9,5 +9,3 @@ def hello(friend_name):
     :return: String containing the message
     """
     return f'Hello, {friend_name}!'
-
-
