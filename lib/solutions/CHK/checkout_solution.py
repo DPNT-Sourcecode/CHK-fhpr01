@@ -1,7 +1,9 @@
-
+import math
 
 # noinspection PyUnusedLocal
 # skus = unicode string
+
+
 def checkout(skus):
     """
     Add the total checkout item values
@@ -38,5 +40,6 @@ def checkout(skus):
             total += 15 * value
 
     return total
+
 
 
