@@ -23,7 +23,7 @@ class TestCheckout():
         assert checkout("A, A, B, A") == 160
 
     def test_multiple_multi_itmes_offers(self):
+        assert checkout("A, A, B, A, A, A, A") == 290
 
-        assert checkout("A, A, B, A, A, A, A") == 160
 
 
