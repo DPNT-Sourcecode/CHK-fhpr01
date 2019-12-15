@@ -30,3 +30,7 @@ class TestCheckout():
 
     def test_multipe_type_B_values(self):
         assert checkout("BB") == 45
+
+    def check_single_item_value(self):
+        assert checkout("E") == 40
+
