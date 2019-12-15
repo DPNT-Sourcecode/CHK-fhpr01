@@ -3,7 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    items = skus.split(',')
+    items = skus.replace(" ", "").split(',')
     item_dic = {}
     for x in items:
         if x in item_dic:
@@ -24,5 +24,6 @@ def checkout(skus):
             total = 15 * value
 
     return total
+
 
 
