@@ -64,8 +64,18 @@ def checkout(skus):
 
         elif key == 'E':
             total += PRICE_E * value
+            if item_dic['B'] > 0 and item_dic['E'] >= 2:
+                total_discount = math.floor(item_dic['E'] / 2)
+                total_B = item_dic['B']
+                if total_B == total_discount:
+                    total -= PRICE_B * total_discount
+                elif total_discount > total_B:
+                    total -= total_B * PRICE_B
+                elif total_discount < total_B:
+                    total -= total_discount * PRICE_B
 
         else:
             return -1
 
     return total
+
