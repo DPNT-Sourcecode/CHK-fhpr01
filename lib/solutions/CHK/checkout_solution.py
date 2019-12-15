@@ -12,16 +12,17 @@ def checkout(skus):
             item_dic[x] = 1
 
     total = 0
-
+    print(item_dic)
     for key, value in item_dic.items():
         if key == 'A':
-            total += 50
+            total = 50 * value
         elif key == 'B':
-            total += 30
+            total = 30 * value
         elif key == 'C':
-            total += 20
+            total = 20 * value
         elif key == 'D':
-            total += 15
+            total = 15 * value
 
     return total
+
 
