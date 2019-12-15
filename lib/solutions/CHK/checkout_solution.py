@@ -11,5 +11,3 @@ def checkout(skus):
 		else:
 			item_dic[x] = 1
     return 100
-
-

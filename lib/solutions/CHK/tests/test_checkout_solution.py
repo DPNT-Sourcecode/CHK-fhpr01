@@ -9,5 +9,3 @@ class TestCheckout():
         Test return value
         """
         assert checkout("A, A") == 100
-
-
