@@ -14,6 +14,12 @@ def checkout(skus):
     :rtype: int
     """
 
+    PRICE_A = 50
+    PRICE_B = 30
+    PRICE_C = 20
+    PRICE_D = 15
+    PRICE_E = 40
+
     if not isinstance(skus, str):
         return -1
 
@@ -30,26 +36,33 @@ def checkout(skus):
     total = 0
     for key, value in item_dic.items():
         if key == 'A':
-            total += 50 * value
+            total += PRICE_A * value
             total_discount = math.floor(item_dic['A'] / 3)
             if item_dic['A'] >= 3:
                 total -= (20 * total_discount)
+
         elif key == 'B':
-            total += 30 * value
+            total += PRICE_B * value
             total_discount = math.floor(item_dic['B'] / 2)
             if item_dic['B'] >= 2:
                 total -= (15 * total_discount)
+
         elif key == 'C':
-            total += 20 * value
+            total += PRICE_C * value
+
         elif key == 'D':
-            total += 15 * value
+            total += PRICE_D * value
+
         elif key == 'E':
-            total += 40 * value
+            total += PRICE_E * value
             total_discount = math.floor(item_dic['E'] / 2)
+            if item_dic['E'] >= 2:
+                total += PRICE_B
 
         else:
             return -1
 
     return total
+
 
 
